@@ -5,6 +5,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 	<!-- CSS + Icons-->
 	<link rel="stylesheet" href="public/css/materialize.css">
+	<link rel="stylesheet" href="public/css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>HV</title>
@@ -13,7 +14,6 @@
 	
 	<header>
 		 <nav class=" light-green accent-3 lighten-1" role="navigation">
-		    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="front-page-logo" class="col s3 image-responsive" src="public/images/logo.png"/></a>
 		      <ul class="right hide-on-med-and-down">
 		        <li><a href="#">Navbar Link</a></li>
 		      </ul>
