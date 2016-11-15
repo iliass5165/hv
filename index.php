@@ -158,6 +158,12 @@
 							include('public/page/concours.php');
 
 							break;
+
+							case 'compet':
+						
+							include('public/page/compet.php');
+
+							break;
 						
 						default:
 						
