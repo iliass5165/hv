@@ -131,7 +131,12 @@
 							include('public/page/photo.php');
 
 							break;
+							
+							case 'concours':
 						
+							include('public/page/concours.php');
+
+							break;
 						
 						default:
 						
