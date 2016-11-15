@@ -14,15 +14,36 @@
 	
 	<header>
 		 <nav class=" green accent-3" role="navigation">
-		      <ul class="left hide-on-med-and-down">
+		      <ul class="right hide-on-med-and-down">
 		        <li><a href="index.php">Accueil</a></li>
 		        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">News<i class="material-icons right">arrow_drop_down</i></a></li>
-		        <ul id="dropdown1" class="dropdown-content">
+		 		<li><a class="dropdown-button" href="#!" data-activates="dropdown2">A Propos<i class="material-icons right">arrow_drop_down</i></a></li>
+		 		<li ><a href="index.php?page=tarifInscription">Inscription</a></li>
+		 		<li ><a href="index.php?page=contact">Contact</a></li>
+		 		<li ><a href="index.php?page=photo">Photo</a></li>
+
+
+				</ul>
+			
+
+		        
+	       	  <ul id="dropdown1" class="dropdown-content">
 				  <li><a href="index.php?page=actualite">Actualité</a></li>
 				  <li><a href="index.php?page=evenement">Evenement</a></li>
 				  <li><a href="index.php?page=competition">Competition</a></li>
+			  <li>
+		        <ul id="dropdown2" class="dropdown-content">
+				  <li><a href="index.php?page=presentation">Présentation</a></li>
+				  <li><a href="index.php?page=association">Association</a></li>
+				  <li><a href="index.php?page=horaire">Horaire</a></li>
+				  <li><a href="index.php?page=clendrier">Calendrier</a></li>
+				  <li><a href="index.php?page=reglement">Réglement Intérieur</a></li>
+				  <li><a href="index.php?page=materiel">Matériel</a></li>
+				  <li><a href="index.php?page=technique">Téchnique</a></li>
+
 				</ul>
-		        <li><a href="#">Navbar Link</a></li>
+
+   
 	
 		      </ul>
 
