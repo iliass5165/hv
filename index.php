@@ -164,6 +164,13 @@
 							include('public/page/concours.php');
 
 							break;
+
+							case 'showactualite';
+
+							include('public/page/showactualite.php');
+
+							break;
+
 						
 						default:
 						
