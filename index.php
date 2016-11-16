@@ -165,12 +165,17 @@
 
 							break;
 
+							case 'compet':
+						
+							include('public/page/compet.php');
+
+							break;
+
 							case 'showactualite';
 
 							include('public/page/showactualite.php');
 
 							break;
-
 						
 						default:
 						
