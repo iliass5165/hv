@@ -10,7 +10,10 @@ body{
     flex-direction: column;
 }
 
-
+.brand-logo
+{
+	height: 70px;
+}
 
   main {
     flex: 1 0 auto;
