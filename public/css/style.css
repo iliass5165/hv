@@ -1,13 +1,22 @@
 body{
-	background-image: url("../images/bg.jpg");
+	background: url("../images/bg.jpg")no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	background-width: 500px;
 	display: flex;
     min-height: 100;
     flex-direction: column;
 }
 
-
+.brand-logo
+{
+	height: 70px;
+}
 
   main {
     flex: 1 0 auto;
   }
+
+   .brand-logo { font-size: 1.6rem; height: 65px;} 

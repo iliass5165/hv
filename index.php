@@ -14,6 +14,7 @@
 	
 	<header>
 		 <nav class=" green accent-3" role="navigation">
+			  <img src="public/images/logo.png" alt="" class="brand-logo">
 		      <ul class="right hide-on-med-and-down">
 		        <li><a href="index.php">Accueil</a></li>
 		        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">News<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -21,9 +22,7 @@
 		 		<li ><a href="index.php?page=tarifInscription">Inscription</a></li>
 		 		<li ><a href="index.php?page=contact">Contact</a></li>
 		 		<li ><a href="index.php?page=photo">Photo</a></li>
-
-
-				</ul>
+			  </ul>
 			
 
 		        
@@ -31,7 +30,7 @@
 				  <li><a href="index.php?page=actualite">Actualité</a></li>
 				  <li><a href="index.php?page=evenement">Evenement</a></li>
 				  <li><a href="index.php?page=competition">Competition</a></li>
-			  <li>
+			  </ul>
 		        <ul id="dropdown2" class="dropdown-content">
 				  <li><a href="index.php?page=presentation">Présentation</a></li>
 				  <li><a href="index.php?page=association">Association</a></li>
@@ -48,10 +47,17 @@
 		      </ul>
 
 		      <ul id="nav-mobile" class="side-nav">
-		        <li><a href="#">Navbar Link</a></li>
-		        <li><a href="#">Navbar Link</a></li>
-		        <li><a href="#">Navbar Link</a></li>
-		        <li><a href="#">Navbar Link</a></li>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="index.php?page=actualite">Actualité</a></li>
+				<li><a href="index.php?page=evenement">Evenement</a></li>
+				<li><a href="index.php?page=competition">Competition</a></li>
+				<li><a href="index.php?page=presentation">Présentation</a></li>
+				<li><a href="index.php?page=association">Association</a></li>
+				<li><a href="index.php?page=horaire">Horaire</a></li>
+				<li><a href="index.php?page=clendrier">Calendrier</a></li>
+				<li><a href="index.php?page=reglement">Réglement Intérieur</a></li>
+				<li><a href="index.php?page=materiel">Matériel</a></li>
+				<li><a href="index.php?page=technique">Téchnique</a></li>
 		      </ul>
 		     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 		    </div>
@@ -164,6 +170,12 @@
 							include('public/page/compet.php');
 
 							break;
+
+							case 'showactualite';
+
+							include('public/page/showactualite.php');
+
+							break;
 						
 						default:
 						
@@ -186,34 +198,24 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">A propos</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quibusdam, alias deserunt possimus saepe mollitia aut veritatis delectus sapiente necessitatibus itaque magni? Dolores nobis alias nihil explicabo deserunt quaerat! Inventore!</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Contact</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+				<li>Titre</li>
+				<li>Tel</li>
+				<li>Email</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by <a class="brown-text text-lighten-3" href="#">délerium Palace</a>
       </div>
     </div>
   </footer>
