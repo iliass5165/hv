@@ -1,9 +1,10 @@
 <?php
 
-class Categorie
+class Album
 {
 	private $id
 	private $titre
+	private $description
 
 
 //getter
@@ -17,6 +18,11 @@ public function getTitre()
 	return $this->titre;
 }
 
+public function getDescription()
+{
+	return $this->description;
+}
+
 //setter
 public function setTitre($titre)
 {
@@ -27,5 +33,6 @@ public function setDescription($description)
 {
 	return $this->description = $description;
 }
+
 
 }
