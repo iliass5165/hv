@@ -127,17 +127,6 @@
 
 							break;
 
-							case 'materiel':
-						
-							include('public/page/materiel.php');
-
-							break;
-
-							case 'technique':
-						
-							include('public/page/technique.php');
-
-							break;
 						
 							case 'tarifInscription':
 						
@@ -172,6 +161,12 @@
 							case 'showactualite';
 
 							include('public/page/showactualite.php');
+
+							break;
+
+							case 'materiel';
+
+							include('public/page/materiel&technique.php');
 
 							break;
 						
