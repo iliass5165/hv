@@ -7,7 +7,7 @@ class News
 	private $contenu
 	private $categorie
 	private $photo
-}
+
 
 //getter
 public function getId()
@@ -44,4 +44,6 @@ public function setTitre($titre)
 public function setContenu($contenu)
 {
 	$this->contenu = $contenu;
+}
+
 }

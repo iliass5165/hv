@@ -1,6 +1,6 @@
 <?php
 
-class Categorie
+class Photo
 {
 	private $id
 	private $titre
@@ -17,15 +17,11 @@ public function getTitre()
 	return $this->titre;
 }
 
+
 //setter
 public function setTitre($titre)
 {
 	return $this->titre = $titre;
-}
-
-public function setDescription($description)
-{
-	return $this->description = $description;
 }
 
 }
