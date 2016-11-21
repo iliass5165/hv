@@ -2,20 +2,14 @@
 if (isset($_GET['controller']))
 {
 	$controller= $_GET['controller'];
-	$action= $_GET['action'];
+	$action = $_GET['action'];
+	
 	switch ($controller) 
 	{
 
-			
-			case 'accueil':
-			
-				include('public/page/accueil.php');
-
-			break;
-
 			case 'actualite':
 
-				include('public/page/actualite.php');
+				include('private/Controller/ActualiteController.php');
 
 			break;
 
