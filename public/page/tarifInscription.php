@@ -46,9 +46,32 @@
         </div>
       </div>
 
+        <!-- Switch -->
+  <div class="row">
+        
+ <p class="input-field col s12">Etiez-vous licencier la saison dernière?</p>
+    <div class="input-field col s7 offset-s4">  
+
+      <div class="switch">
+
+        <label>
+          Non
+          <input type="checkbox">
+          <span class="lever"></span>
+          Oui
+        </label>
+      </div>
+
+    </div>
+  </div>
   
-
-
+      <div class="row">
+      <div class="input-field col s12 offset-s9"> 
+        <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer
+               <i class="material-icons right">send</i>
+        </button>
+      </div>  
+      </div>
 
 
     </div>
