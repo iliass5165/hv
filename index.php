@@ -64,6 +64,7 @@
 	<div class="container">
 		<div class="row">
 			<?php
+				require('private/Pdo/MyPdo.php');
 				require("private/routing.php");
 			?>
 			<!-- JS -->
