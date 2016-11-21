@@ -1,6 +1,6 @@
 <?php
 
-class Materiel
+class Gymnase
 {
 	private $id
 	private $titre
