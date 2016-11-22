@@ -65,6 +65,8 @@
 		<div class="row">
 			<?php
 				require('private/Pdo/MyPdo.php');
+				require('private/Class/Agenda.php');
+				require('private/Class/Statut.php');
 				require("private/routing.php");
 			?>
 			<!-- JS -->
