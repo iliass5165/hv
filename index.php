@@ -67,6 +67,7 @@
 				require('private/Pdo/MyPdo.php');
 				require('private/Class/Agenda.php');
 				require('private/Class/Statut.php');
+				require('private/Class/Contact.php');
 				require("private/routing.php");
 			?>
 			<!-- JS -->

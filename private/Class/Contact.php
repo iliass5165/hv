@@ -45,7 +45,7 @@ public function setEmail($email)
 	$this->email = $email;
 }
 
-public function setoord($coord)
+public function setCoord($coord)
 {
 	$this->coord = $coord;
 }
