@@ -6,7 +6,7 @@ class Mypdo
 	{
 		try 
 		{
-			$this->connection = new PDO("mysql:host=localhost;dbname=hv;charset=utf8", "root", "toor");
+			$this->connection = new PDO("mysql:host=localhost;dbname=hv;charset=utf8", "root", "");
 			$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 		catch (Exception $e)
