@@ -30,7 +30,7 @@ Class StatutPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage d'statut". $e->getMessage();
 		}
 	}
 
@@ -45,7 +45,7 @@ Class StatutPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage d'statut". $e->getMessage();
 		}
 	}
 
@@ -62,7 +62,7 @@ Class StatutPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete de modification d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete de modification d'statut". $e->getMessage();
 		}
 	}
 	public function delete($id)
@@ -76,7 +76,7 @@ Class StatutPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage d'statut". $e->getMessage();
 		}
 		public function getall()
 		{

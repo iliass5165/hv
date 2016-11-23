@@ -68,6 +68,11 @@
 				require('private/Class/Agenda.php');
 				require('private/Class/Statut.php');
 				require('private/Class/Contact.php');
+				require('private/Class/Saison.php');
+				require('private/Class/Effectif.php');
+				require('private/Class/Utilisateur.php');
+				require('private/Class/Inscription.php');
+				require('private/Class/Association.php');
 				require("private/routing.php");
 			?>
 			<!-- JS -->

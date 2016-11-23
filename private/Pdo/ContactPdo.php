@@ -34,7 +34,7 @@ Class ContactPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage contact". $e->getMessage();
 		}
 	}
 
@@ -52,7 +52,7 @@ Class ContactPdo extends MyPdo
 				}
 					catch(Exception $e)
 						{
-							"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+							"Erreur lors de l'execution de la requete d'affichage contact". $e->getMessage();
 						}
 		}
 			public function edit($id,$contact)
@@ -71,7 +71,7 @@ Class ContactPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete de modification d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete de modification contact". $e->getMessage();
 		}
 	}
 	public function delete($id)
@@ -85,7 +85,7 @@ Class ContactPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage contact". $e->getMessage();
 		}
 
 		public function getall()

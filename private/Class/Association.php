@@ -88,7 +88,10 @@ public function setReglement($reglement)
 	return $this->reglement = $reglement;
 }
 
-
+public function setIdstatus($Idstatus);
+{
+	return $this->idstatus = $idstatus;
+}
 
 
 

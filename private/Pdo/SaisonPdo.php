@@ -30,7 +30,7 @@ Class SaisonPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage d'saison". $e->getMessage();
 		}
 	}
 
@@ -47,7 +47,7 @@ Class SaisonPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage d'saison". $e->getMessage();
 		}
 	}
 
@@ -55,7 +55,7 @@ Class SaisonPdo extends MyPdo
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE saison SET description = :description, datesaison = :datesaison, ideffcetif = :ideffectif WHERE id = :id");
+			$req = $this->connection->prepare("UPDATE saison SET description = :description, datesaison = :datesaison, ideffectif = :ideffectif WHERE id = :id");
 			$req->bindValue(':id', $id);
 			$req->bindValue(':description', $saison->getDescription(), PDO::PARAM_STR);
 			$req->bindValue('datesaison', $saison->getDatesaison());
@@ -66,7 +66,7 @@ Class SaisonPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete de modification d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete de modification d'saison". $e->getMessage();
 		}
 	}
 	public function delete($id)
@@ -80,7 +80,7 @@ Class SaisonPdo extends MyPdo
 		}
 		catch(Exception $e)
 		{
-			"Erreur lors de l'execution de la requete d'affichage d'agenda". $e->getMessage();
+			"Erreur lors de l'execution de la requete d'affichage d'saison". $e->getMessage();
 		}
 		public function getall()
 		{
