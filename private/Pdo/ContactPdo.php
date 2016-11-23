@@ -26,9 +26,9 @@ Class ContactPdo extends MyPdo
 			$contact = new contact();
 			$contact->setId($req['id']);
 			$contact->setEmail($req['email']);
-			$contact->setCoord($req['coord']);
+			$contact->setCoord($req['coordonneesmap']);
 			$contact->setTelephone($req['telephone']);	
-			$contact->setAdress($req['adress']);
+			$contact->setAdress($req['adresse']);
 	
 			return $contact;
 		}
@@ -42,11 +42,11 @@ Class ContactPdo extends MyPdo
 		{
 			try
 				{
-					$req = $this->connection->prepare('INSERT INTO conctact(email,coord,telephone,adress) VALUES (:email, :coord, :telephone, :adress)');
+					$req = $this->connection->prepare('INSERT INTO conctact(email,coord,telephone,adresse) VALUES (:email, :coord, :telephone, :adresse)');
 					$req->bindValue(':email',$contact->getEmail(), PDO::PARAM_STR);
 					$req->bindValue(':coord',$contact->getCoord(), PDO::PARAM_STR);
 					$req->bindValue(':telephone',$contact->getTelephone(), PDO::PARAM_STR);
-					$req->bindValue(':adress',$contact->getAdress(), PDO::PARAM_STR);
+					$req->bindValue(':adresse',$contact->getAdress(), PDO::PARAM_STR);
 					$req->execute();
 					$req->closeCursor();
 				}
@@ -59,11 +59,11 @@ Class ContactPdo extends MyPdo
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE contact SET email = :email , coordonneesmap = :coordonneesmap , telephone = :telephone , adress = :adress WHERE id = :id");
+			$req = $this->connection->prepare("UPDATE contact SET email = :email , coordonneesmap = :coordonneesmap , telephone = :telephone , adresse = :adresse WHERE id = :id");
 			$req->bindValue(':email',$contact->getEmail(), PDO::PARAM_STR);
 			$req->bindValue(':coord',$contact->getCoord(), PDO::PARAM_STR);
 			$req->bindValue(':telephone',$contact->getTelephone(), PDO::PARAM_STR);
-			$req->bindValue(':adress',$contact->getAdress(), PDO::PARAM_STR);
+			$req->bindValue(':adresse',$contact->getAdress(), PDO::PARAM_STR);
 			$req->bindValue(':id', $id);
 			$req->execute();
 			$req->closeCursor();
@@ -100,7 +100,7 @@ Class ContactPdo extends MyPdo
 					$contact->setEmail($data['email']);
 					$contact->setCoord($data['coordonneesmap']);
 					$contact->setTelephone($data['telephone']);
-					$contact->setAdress($data['adress']);
+					$contact->setAdress($data['adresse']);
 					$afficher[] = $contact;
 				}
 				return $afficher;
