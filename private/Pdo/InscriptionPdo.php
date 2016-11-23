@@ -25,10 +25,10 @@ Class InscriptionPdo extends MyPdo
 			$inscription = new Inscription();
 			$inscription->setId($req['id']);
 			$inscription->setDate($req['date']);
-			$inscription->setCommentaire($req['commentaire']);
+			$inscription->setMessage($req['message']);
 			$inscription->setNom($req['nom']);
 			$inscription->setPrenom($req['prenom']);
-			$inscription->setDtnaissance($req['dtnaissance']);
+			$inscription->setDtnaissance($req['datenaissance']);
 			$inscription->setMail($req['mail']);
 			$inscription->setLicence($req['licence']);
 			return $inscription;
@@ -43,12 +43,12 @@ Class InscriptionPdo extends MyPdo
 	{
 		try
 		{
-		$req = $this->connection->prepare('INSERT INTO inscription(date, commentaire, nom, prenom, dtnaissance, mail, licence) VALUES(:date, :commentaire, :nom, :prenom, :dtnaissance, :mail, :licence');
+		$req = $this->connection->prepare('INSERT INTO inscription(date, message, nom, prenom, datenaissance, mail, licence) VALUES(:date, :message, :nom, :prenom, :dtnaissance, :mail, :licence');
 		$req->bindValue(':date',$inscription->geDate());
-		$req->bindValue(':commentaire',$inscription->getCommentaire(), PDO::PARAM_STR);
+		$req->bindValue(':message',$inscription->getMessage(), PDO::PARAM_STR);
 		$req->bindValue(':nom',$inscription->getNom(), PDO::PARAM_STR);
 		$req->bindValue(':prenom',$inscription->getPrenom(), PDO::PARAM_STR);
-		$req->bindValue(':dtnaissance',$inscription->getDtnaissance(), PDO::PARAM_STR);
+		$req->bindValue(':datenaissance',$inscription->getDtnaissance(), PDO::PARAM_STR);
 		$req->bindValue(':mail',$inscription->getMail(), PDO::PARAM_STR);
 		$req->bindValue(':licence',$inscription->getLicence(), PDO::PARAM_STR);
 		$req->execute();
@@ -64,13 +64,13 @@ Class InscriptionPdo extends MyPdo
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE inscription SET date = :date, commentaire = :commentaire, nom = :nom, prenom = :prenom, dtnaissance = :dtnaissance, mail = :mail, licence = :licence WHERE id = :id");
+			$req = $this->connection->prepare("UPDATE inscription SET date = :date, message = :message, nom = :nom, prenom = :prenom, dtnaissance = :dtnaissance, mail = :mail, licence = :licence WHERE id = :id");
 			$req->bindValue(':id', $id);
 			$req->bindValue(':date', $inscription->getDate();
-			$req->bindValue('commentaire', $inscription->getCommentaire(), PDO::PARAM_STR);
+			$req->bindValue('message', $inscription->getMessage(), PDO::PARAM_STR);
 			$req->bindValue('nom', $inscription->getNom(), PDO::PARAM_STR);
 			$req->bindValue('prenom', $inscription->getPrenom(), PDO::PARAM_STR);
-			$req->bindValue('dtnaissance', $inscription->getDtnaissance(), PDO::PARAM_STR);
+			$req->bindValue('datenaissance', $inscription->getDtnaissance(), PDO::PARAM_STR);
 			$req->bindValue('mail', $inscription->getMail(), PDO::PARAM_STR);
 			$req->bindValue('licence', $inscription->getLicence(), PDO::PARAM_STR);
 			$req->execute();
@@ -105,10 +105,10 @@ Class InscriptionPdo extends MyPdo
 					$inscription = new Inscription();
 					$inscription->setId($data['id']);
 					$inscription->setDate($data['date']);
-					$inscription->setCommentaire($data['commentaire']);
+					$inscription->setMessage($data['message']);
 					$inscription->setNom($data['nom']);
 					$inscription->setPrenom($data['prenom']);
-					$inscription->setDtnaissance($data['dtnaissance']);
+					$inscription->setDtnaissance($data['datenaissance']);
 					$inscription->setMail($data['mail']);
 					$inscription->setLicence($data['licence']);
 					$afficher[] = $inscription;

@@ -4,7 +4,7 @@ class Saison
 	{
 		private $id
 		private $description
-		private $datesaison
+		private $date
 		private $ideffectif
 		
 	}
@@ -20,9 +20,9 @@ public function getDescription()
 	return $this->description;
 }
 
-public function getDatesaison()
+public function getDate()
 {
-	return $this->datesaison;
+	return $this->date;
 }
 public function getIdeffectif()
 {
@@ -40,9 +40,9 @@ public function setDescription($description)
 	$this->description = $description;
 }
 
-public function setDatesaison($datesaison)
+public function setDatesaison($date)
 {
-	$this->datesaison = $datesaison;
+	$this->date = $date;
 }
 
 public function setIdeffectif($ideffectif)

@@ -25,7 +25,7 @@ Class UtilisateurPdo extends MyPdo
 			$utilisateur = new Utilisateur();
 			$utilisateur->setId($req['id']);
 			$utilisateur->setLogin($req['login']);
-			$utilisateur->setMdp($req['mdp']);
+			$utilisateur->setMdp($req['motpasse']);
 			return $utilisateur;
 		}
 		catch(Exception $e)
@@ -38,9 +38,9 @@ Class UtilisateurPdo extends MyPdo
 	{
 		try
 		{
-		$req = $this->connection->prepare('INSERT INTO utilisateur(login, mdp) VALUES(:login, :mdp');
+		$req = $this->connection->prepare('INSERT INTO utilisateur(login, motpasse) VALUES(:login, :motpasse');
 		$req->bindValue(':login',$utilisateur->getLogin(), PDO::PARAM_STR);
-		$req->bindValue(':mdp',$utilisateur->getMdp(), PDO::PARAM_DATE);
+		$req->bindValue(':motpasse',$utilisateur->getMdp(), PDO::PARAM_DATE);
 		$req->execute();
 		$req->closeCursor();
 		}
@@ -54,10 +54,10 @@ Class UtilisateurPdo extends MyPdo
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE utilisateur SET login = :login, mdp = :mdp WHERE id = :id");
+			$req = $this->connection->prepare("UPDATE utilisateur SET login = :login, motpasse = :motpasse WHERE id = :id");
 			$req->bindValue(':id', $id);
 			$req->bindValue(':login', $utilisateur->getLogin(), PDO::PARAM_STR);
-			$req->bindValue('mdp', $utilisateur->getMdp(), PDO::PARAM_STR);
+			$req->bindValue('motpasse', $utilisateur->getMdp(), PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();
 
@@ -90,7 +90,7 @@ Class UtilisateurPdo extends MyPdo
 					$utilisateur = new Utilisateur();
 					$utilisateur->setId($data['id']);
 					$utilisateur->setLogin($data['login']);
-					$utilisateur->setMdp($data['mdp']);
+					$utilisateur->setMdp($data['motpasse']);
 					$afficher[] = $utilisateur;
 				}
 				return $afficher;

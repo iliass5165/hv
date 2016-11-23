@@ -25,7 +25,7 @@ Class SaisonPdo extends MyPdo
 			$saison = new Saison();
 			$saison->setId($req['id']);
 			$saison->setDescription($req['description']);
-			$saison->setIdeffectif($req['ideffectif']);
+			$saison->setIdeffectif($req['Effectif_id']);
 			return $saison;
 		}
 		catch(Exception $e)
@@ -38,10 +38,10 @@ Class SaisonPdo extends MyPdo
 	{
 		try
 		{
-		$req = $this->connection->prepare('INSERT INTO saison(description, datesaison, ideffectif) VALUES(:description, :datesaison, :ideffectif');
+		$req = $this->connection->prepare('INSERT INTO saison(description, date, Effectif_id) VALUES(:description, :date, :Effectif_id');
 		$req->bindValue(':description',$saison->getDescription(), PDO::PARAM_STR);
-		$req->bindValue(':datesaison',$saison->getDate(), PDO::PARAM_DATE);
-		$req->bindValue(':ideffectif',$saison->getIdeffectif();
+		$req->bindValue(':date',$saison->getDate(), PDO::PARAM_DATE);
+		$req->bindValue(':Effectif_id',$saison->getIdeffectif();
 		$req->execute();
 		$req->closeCursor();
 		}
@@ -55,11 +55,11 @@ Class SaisonPdo extends MyPdo
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE saison SET description = :description, datesaison = :datesaison, ideffectif = :ideffectif WHERE id = :id");
+			$req = $this->connection->prepare("UPDATE saison SET description = :description, date = :date, Effectif_id = :Effectif_id WHERE id = :id");
 			$req->bindValue(':id', $id);
 			$req->bindValue(':description', $saison->getDescription(), PDO::PARAM_STR);
-			$req->bindValue('datesaison', $saison->getDatesaison());
-			$req->bindValue(':ideffectif', $saison->getIdeffectif());
+			$req->bindValue('date', $saison->getDate());
+			$req->bindValue(':Effectif_id', $saison->getIdeffectif());
 			$req->execute();
 			$req->closeCursor();
 
@@ -92,8 +92,8 @@ Class SaisonPdo extends MyPdo
 					$saison = new Saison();
 					$saison->setId($data['id']);
 					$saison->setDescription($data['description']);
-					$saison->setDatesaison($data['datesaison']);
-					$saison->setIdeffectif($data['ideffectif']);
+					$saison->setDate($data['date']);
+					$saison->setIdeffectif($data['Effectif_id']);
 					$afficher[] = $saison;
 				}
 				return $afficher;

@@ -4,7 +4,7 @@
 	{
 		private $id
 		private $date
-		private $commentaire
+		private $message
 		private $nom
 		private $prenom
 		private $dtnaissance
@@ -24,9 +24,9 @@ public function getDate()
 	return $this->date;
 }
 
-public function getCommentaire()
+public function getMessage()
 {
-	return $this->commentaire;
+	return $this->message;
 }
 public function getNom()
 {
@@ -64,9 +64,9 @@ public function setDate($date)
 	$this->date = $date;
 }
 
-public function setCommentaire($commentaire)
+public function setMessage($message)
 {
-	$this->commentaire = $commentaire;
+	$this->message = $message;
 }
 public function setNom($nom)
 {

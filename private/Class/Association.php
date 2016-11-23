@@ -9,7 +9,7 @@
 		private $mailperso
 		private $mailpro 
 		private $reglement
-		private $status
+		private $statut
 
 	}
 
@@ -47,9 +47,9 @@ public function getReglement()
 	return $this->reglement;
 }
 
-public function getStatus()
+public function getstatut()
 {
-	return $this->status;
+	return $this->statut;
 }
 
 //setter 
@@ -88,9 +88,9 @@ public function setReglement($reglement)
 	return $this->reglement = $reglement;
 }
 
-public function setIdstatus($Idstatus);
+public function setIdstatut($Idstatut);
 {
-	return $this->idstatus = $idstatus;
+	return $this->idstatut = $idstatut;
 }
 
 

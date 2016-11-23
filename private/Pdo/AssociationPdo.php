@@ -27,10 +27,10 @@ Class AssociationPdo extends MyPdo
 			$association->setNom($req['nom']);
 			$association->setPrenom($req['prenom']);
 			$association->setTelephone($req['telephone']);
-			$association->setMailperso($req['mailperso']);
-			$association->setMailpro($req['mailpro']);
-			$association->setReglement($req['reglement']);
-			$association->setStatus($req['status']);
+			$association->setMailperso($req['mailPerso']);
+			$association->setMailpro($req['mailPro']);
+			$association->setReglement($req['Reglement']);
+			$association->setstatut($req['statut_id']);
 			
 			return $association;
 		}
@@ -44,16 +44,16 @@ Class AssociationPdo extends MyPdo
 	{
 		try
 		{
-		$req = $this->connection->prepare('INSERT INTO association(nom, prenom, telephone, mailperso, mailpro, reglement, status) VALUES(:nom, :prenom, :telephone, :mailperso, :mailpro, :reglement, :status');
-		$req->bindValue(':date',$association->geDate());
+		$req = $this->connection->prepare('INSERT INTO association(nom, prenom, telephone, mailPerso, mailPro, Reglement, statut_id) VALUES(:nom, :prenom, :telephone, :mailPerso, :mailPro, :Reglement, :statut_id');
+		$req->bindValue(':date',$association->getDate());
 		$req->bindValue(':commentaire',$association->getCommentaire(), PDO::PARAM_STR);
 		$req->bindValue(':nom',$association->getNom(), PDO::PARAM_STR);
 		$req->bindValue(':prenom',$association->getPrenom(), PDO::PARAM_STR);
 		$req->bindValue(':telephone',$association->getTelephone(), PDO::PARAM_STR);
-		$req->bindValue(':mailperso',$association->getMailperso(), PDO::PARAM_STR);
-		$req->bindValue(':mailpro',$association->getMailpro(), PDO::PARAM_STR);
-		$req->bindValue(':reglement',$association->getReglement(), PDO::PARAM_STR);
-		$req->bindValue(':status',$association->getStatus(), PDO::PARAM_STR);
+		$req->bindValue(':mailPerso',$association->getMailperso(), PDO::PARAM_STR);
+		$req->bindValue(':mailPro',$association->getMailpro(), PDO::PARAM_STR);
+		$req->bindValue(':Reglement',$association->getReglement(), PDO::PARAM_STR);
+		$req->bindValue(':statut_id',$association->getStatut());
 		$req->execute();
 		$req->closeCursor();
 		}
@@ -67,16 +67,17 @@ Class AssociationPdo extends MyPdo
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE association SET nom = :nom, prenom = :prenom, telephone = :telephone, mailperso = :mailperso, reglement = :reglement, status = :status  WHERE id = :id");
+			$req = $this->connection->prepare("UPDATE association SET nom = :nom, prenom = :prenom, telephone = :telephone, mailPerso = :mailPerso, mailPro = :mailPro, Reglement = :Reglement, statut_id = :statut_id  WHERE id = :id");
 			$req->bindValue(':id', $id);
 			$req->bindValue(':date', $association->getDate();
 			$req->bindValue('commentaire', $association->getCommentaire(), PDO::PARAM_STR);
 			$req->bindValue('nom', $association->getNom(), PDO::PARAM_STR);
 			$req->bindValue('prenom', $association->getPrenom(), PDO::PARAM_STR);
 			$req->bindValue('telephone', $association->getTelephone(), PDO::PARAM_STR);
-			$req->bindValue('mailperso', $association->getMailperso(), PDO::PARAM_STR);
-			$req->bindValue('reglement', $association->getReglement(), PDO::PARAM_STR);
-			$req->bindValue('status', $association->getStatus(), PDO::PARAM_STR);
+			$req->bindValue('mailPerso', $association->getMailperso(), PDO::PARAM_STR);
+			$req->bindValue('mailPro', $association->getMailpro(), PDO::PARAM_STR);
+			$req->bindValue('Reglement', $association->getReglement(), PDO::PARAM_STR);
+			$req->bindValue('statut_id', $association->getStatut());
 
 			$req->execute();
 			$req->closeCursor();
@@ -112,10 +113,10 @@ Class AssociationPdo extends MyPdo
 					$association->setNom($data['nom']);
 					$association->setPrenom($data['prenom']);
 					$association->setTelephone($data['telephone']);
-					$association->setMailperso($data['mailperso']);
-					$association->setMailpro($data['mailpro']);
-					$association->setReglement($data['reglement']);
-					$association->setStatus($data['status_id']);
+					$association->setMailperso($data['mailPerso']);
+					$association->setMailpro($data['mailPro']);
+					$association->setReglement($data['Reglement']);
+					$association->setstatut($data['statut_id']);
 					$afficher[] = $association;
 				}
 				return $afficher;
