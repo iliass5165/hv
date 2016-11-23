@@ -69,3 +69,4 @@ Class NewsPdo extends MyPdo
 
 
 }
+
