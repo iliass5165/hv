@@ -45,3 +45,7 @@ public function setDatesaison($datesaison)
 	$this->datesaison = $datesaison;
 }
 
+public function setIdeffectif($ideffectif)
+{
+	$this->ideffectif = $ideffectif;
+}

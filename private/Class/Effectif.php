@@ -45,3 +45,7 @@ public function setCategorie($categorie)
 {
 	$this->categorie = $categorie;
 }
+public function setIdsaison($idsaison)
+{
+	$this->idsaison = $idsaison;
+}
