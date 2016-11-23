@@ -2,11 +2,11 @@
 
 class Categorie
 {
-	private $id
-	private $nom
-	private $horaires
-	private $presentation
-	private $photo
+	private $id;
+	private $nom;
+	private $horaires;
+	private $presentation;
+	private $photo;
 
 
 //getter
@@ -36,19 +36,23 @@ public function getPhoto()
 }
 
 //setter
+public function setId($id)
+{
+	$this->id = $id;
+}
 public function setNom($nom)
 {
-	return $this->nom = $nom;
+	$this->nom = $nom;
 }
 
 public function setHoraires($horaires)
 {
-	return $this->horaires = $horaires;
+	$this->horaires = $horaires;
 }
 
 public function setPresentation($presentation)
 {
-	return $this->presentation = $presentation;
+	$this->presentation = $presentation;
 }
 
 }

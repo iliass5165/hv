@@ -30,7 +30,7 @@ Class AssociationPdo extends MyPdo
 			$association->setMailperso($req['mailPerso']);
 			$association->setMailpro($req['mailPro']);
 			$association->setReglement($req['Reglement']);
-			$association->setstatut($req['statut_id']);
+			$association->setStatut($req['statut_id']);
 			
 			return $association;
 		}
