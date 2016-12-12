@@ -21,7 +21,7 @@ if (isset($_GET['controller']))
 
 			case 'competition':
 			
-				include('public/page/competition.php');
+				include('private/Controller/CompetitionController.php');
 
 			break;
 			case 'presentation':

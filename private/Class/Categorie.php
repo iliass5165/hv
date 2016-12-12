@@ -23,9 +23,9 @@ public function setTitre($titre)
 	return $this->titre = $titre;
 }
 
-public function setDescription($description)
+public function setId($id)
 {
-	return $this->description = $description;
+	return $this->id = $id;
 }
 
 }

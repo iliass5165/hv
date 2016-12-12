@@ -66,6 +66,7 @@
 			<?php
 				require('private/Pdo/MyPdo.php');
 				require("private/routing.php");
+				require("private/Class/Categorie.php");
 			?>
 			<!-- JS -->
 			<script src="public/js/materialize.js"></script>
