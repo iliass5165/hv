@@ -19,7 +19,7 @@ Class CategoriePdo extends MyPdo
 		try
 		{
 			$req = $this->connection->prepare("INSERT INTO categorie('titre') values (:titre) ");
-			$req->bindValue(':titre', $categorie->getTitre());
+			$req->bindValue(':titre', $categorie->getTitre()PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();
 		}

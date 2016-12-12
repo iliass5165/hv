@@ -22,8 +22,8 @@ class MaterielPdo extends MyPdo
 		try
 		{
 			$req = $this->connection->prepare("INSERT INTO materiel('titre','description') VALUES (:titre, :description)");
-			$req->bindValue(':titre',$materiel->getTitre());
-			$req->bindValue(':description',$materiel->getDescription());
+			$req->bindValue(':titre',$materiel->getTitre(), PDO::PARAM_STR);
+			$req->bindValue(':description',$materiel->getDescription(), PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();
 		}
@@ -43,7 +43,7 @@ class MaterielPdo extends MyPdo
 			$req->execute();
 			$req->closeCursor();
 			$materiel = New Materiel();
-			$materiel->setId($req[:'id']);
+			$materiel->setId($req['id']);
 			$materiel->setTitre($req['titre']);
 			$materiel->setDescription($req['description']);
 
@@ -88,8 +88,8 @@ class MaterielPdo extends MyPdo
 		{
 			$req = $this->connection->prepare("DELETE materiel SET titre = :titre AND description = :description WHERE id = :id");
 			$req->bindValue("id", $id->getId());
-			$req->bindValue("titre", $titre->getTitre());
-			$req->bindValue("description", $description->getDescription());
+			$req->bindValue("titre", $titre->getTitre(), PDO::PARAM_STR);
+			$req->bindValue("description", $description->getDescription(), PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();
 
