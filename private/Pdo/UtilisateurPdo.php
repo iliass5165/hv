@@ -40,7 +40,7 @@ Class UtilisateurPdo extends MyPdo
 		{
 		$req = $this->connection->prepare('INSERT INTO utilisateur(login, motpasse) VALUES(:login, :motpasse');
 		$req->bindValue(':login',$utilisateur->getLogin(), PDO::PARAM_STR);
-		$req->bindValue(':motpasse',$utilisateur->getMdp(), PDO::PARAM_DATE);
+		$req->bindValue(':motpasse',$utilisateur->getMdp(), PDO::PARAM_STR);
 		$req->execute();
 		$req->closeCursor();
 		}
