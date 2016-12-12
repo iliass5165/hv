@@ -58,7 +58,7 @@ Class SaisonPdo extends MyPdo
 			$req = $this->connection->prepare("UPDATE saison SET description = :description, date = :date, Effectif_id = :Effectif_id WHERE id = :id");
 			$req->bindValue(':id', $id);
 			$req->bindValue(':description', $saison->getDescription(), PDO::PARAM_STR);
-			$req->bindValue('date', $saison->getDate());
+			$req->bindValue('date', $saison->getDate(), PDO::PARAM_DATE);
 			$req->bindValue(':Effectif_id', $saison->getIdeffectif());
 			$req->execute();
 			$req->closeCursor();

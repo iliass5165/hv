@@ -45,7 +45,7 @@ Class AssociationPdo extends MyPdo
 		try
 		{
 		$req = $this->connection->prepare('INSERT INTO association(nom, prenom, telephone, mailPerso, mailPro, Reglement, statut_id) VALUES(:nom, :prenom, :telephone, :mailPerso, :mailPro, :Reglement, :statut_id');
-		$req->bindValue(':date',$association->getDate());
+		$req->bindValue(':date',$association->getDate(), PDO::PARAM_DATE));
 		$req->bindValue(':commentaire',$association->getCommentaire(), PDO::PARAM_STR);
 		$req->bindValue(':nom',$association->getNom(), PDO::PARAM_STR);
 		$req->bindValue(':prenom',$association->getPrenom(), PDO::PARAM_STR);
@@ -69,7 +69,7 @@ Class AssociationPdo extends MyPdo
 		{
 			$req = $this->connection->prepare("UPDATE association SET nom = :nom, prenom = :prenom, telephone = :telephone, mailPerso = :mailPerso, mailPro = :mailPro, Reglement = :Reglement, statut_id = :statut_id  WHERE id = :id");
 			$req->bindValue(':id', $id);
-			$req->bindValue(':date', $association->getDate();
+			$req->bindValue(':date', $association->getDate(), PDO::PARAM_DATE);
 			$req->bindValue('commentaire', $association->getCommentaire(), PDO::PARAM_STR);
 			$req->bindValue('nom', $association->getNom(), PDO::PARAM_STR);
 			$req->bindValue('prenom', $association->getPrenom(), PDO::PARAM_STR);
