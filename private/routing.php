@@ -1,4 +1,14 @@
 <?php 
+require('private/Pdo/MyPdo.php');
+require('private/Class/Agenda.php');
+require('private/Class/Statut.php');
+require('private/Class/Contact.php');
+require('private/Class/Saison.php');
+require('private/Class/Effectif.php');
+require('private/Class/Utilisateur.php');
+require('private/Class/Inscription.php');
+require('private/Class/Association.php');
+require("private/Class/Categorie.php");
 if (isset($_GET['controller']))
 {
 	$controller= $_GET['controller'];

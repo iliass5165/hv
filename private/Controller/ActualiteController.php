@@ -8,6 +8,7 @@ switch($action)
 	break;
 
 	case "getall":
+		
 		include("public/page/actualite/getall.php");
 	break;
 

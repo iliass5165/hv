@@ -22,6 +22,7 @@ Class Utilisateur
 		return $this->mdp;
 	}
 	//setter 
+	
 	public function setId($id)
 	{
 		$this->id = $id;
@@ -35,5 +36,5 @@ Class Utilisateur
 	public function setMdp($mdp)
 	{
 		$this->mdp = $mdp;
-}
+	}
 }
