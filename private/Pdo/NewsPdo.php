@@ -14,8 +14,6 @@ Class NewsPdo extends MyPdo
 			echo "Error lors de la connection de la classe News avec la base de données : ".$e->getMessage();	
 		}
 	}
-
-
 	public function create($actualite)
 	{
 		try
@@ -33,7 +31,6 @@ Class NewsPdo extends MyPdo
 			echo "Erreur lors de l'execution de la requete ".$e->getMessage();
 		}
 	}
-
 	public function getAll()
 	{
 		$req = $this->connection->prepare("SELECT * FROM news");
@@ -52,7 +49,6 @@ Class NewsPdo extends MyPdo
 		$req->closeCursor();
 		return $data;
 	}
-
 	public function show($id)
 	{
 
@@ -66,6 +62,4 @@ Class NewsPdo extends MyPdo
 	{
 
 	}
-
-
 }

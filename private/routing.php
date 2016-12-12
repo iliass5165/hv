@@ -59,7 +59,6 @@ if (isset($_GET['controller']))
 
 			break;
 
-		
 			case 'tarifInscription':
 		
 			include('public/page/tarifInscription.php');
