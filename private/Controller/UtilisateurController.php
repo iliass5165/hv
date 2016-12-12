@@ -1,5 +1,4 @@
 <?php
-
 $user = new Utilisateur();
 $connectUser = new UtilisateurPdo();
 
@@ -12,7 +11,8 @@ switch($action)
 	
 	case "login":
 		$user->setLogin($_POST['login']);
-		$user->setMdp($_POST['password']);
+		$user->setMdp(sha1($_POST['password']));
+
 		$utilisateur = $connectUser->show($user);
 		if(!is_null($utilisateur->getId()))
 		{
@@ -22,7 +22,6 @@ switch($action)
 		else
 		{
 			$_SESSION['message_error'] = "Login ou mot de passe incorrect";
-			header('location: index.php?controller=utilisateur&action=signin');
 		}
 	break;
 
@@ -35,17 +34,62 @@ switch($action)
 			
 		else
 		{
-			header('location: index.php');;
+			header('location: index.php');
 		}
 
 	break;
 
 	case "edit":
-		include('public/page/utilisateur/edit.php');
+		if(isset($_SESSION['user']))
+		{
+			if(!empty($_POST))
+			{
+				$user = fixObject($_SESSION['user']);
+				$old = sha1($_POST['old']);
+				$new = sha1($_POST['new']);
+				$confirm = sha1($_POST['confirm']);
+
+				if($user->getMdp() != $old)
+				{
+					$_SESSION['message_error'] = "Veuillez verifier l'ancien mot de passe que vous avez tape.";
+				}
+				elseif($confirm != $new)
+				{
+					
+					$_SESSION['message_error'] = "Veuillez verifier le nouveau mot de passe et sa confirmation.";
+				}
+				else
+				{
+
+
+
+					$user->setMdp($new);
+					$_SESSION['user'] = $user;
+					$connectUser->edit($user);
+
+					$_SESSION['message_success'] = "Votre mot de passe a été bien modifié.";
+				}
+
+				
+			}
+			
+			include('public/page/utilisateur/edit.php');
+		}
+			
+		else
+		{
+			header('location: index.php');
+		}
 	break;
 
-	case "update":
-		echo $_POST['password'];
-	break;
 
+}
+
+
+
+function fixObject (&$object)
+{
+  if (!is_object ($object) && gettype ($object) == 'object')
+    return ($object = unserialize (serialize ($object)));
+  return $object;
 }

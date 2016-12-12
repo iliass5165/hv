@@ -52,13 +52,12 @@ Class UtilisateurPdo extends MyPdo
 		}
 	}
 
-	public function edit($id,$utilisateur)
+	public function edit($utilisateur)
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE utilisateur SET login = :login, motpasse = :motpasse WHERE id = :id");
-			$req->bindValue(':id', $id);
-			$req->bindValue(':login', $utilisateur->getLogin(), PDO::PARAM_STR);
+			$req = $this->connection->prepare("UPDATE utilisateur SET  motpasse = :motpasse WHERE id = :id");
+			$req->bindValue(':id', $utilisateur->getId());
 			$req->bindValue('motpasse', $utilisateur->getMdp(), PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();

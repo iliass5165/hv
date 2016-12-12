@@ -14,7 +14,7 @@ switch($action)
 		}
 		else
 		{
-			echo	'hello';
+			echo 'hello';
 		}
 	break;
 

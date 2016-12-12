@@ -114,9 +114,11 @@ if (isset($_GET['controller']))
 
 			case 'utilisateur';
 
-			include('private/Controller/UtilisateurController.php');
+				include('private/Controller/UtilisateurController.php');
+
 			break;
-		default:
+		
+			default:
 		
 				include('private/Controller/DefaultController.php');
 			
