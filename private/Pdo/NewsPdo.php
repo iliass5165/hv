@@ -62,4 +62,11 @@ Class NewsPdo extends MyPdo
 	{
 
 	}
+<<<<<<< HEAD
 }
+=======
+
+
+}
+
+>>>>>>> 8235eace37e9745b5b20af5fd547ce82f5cb66a7

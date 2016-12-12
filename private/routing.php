@@ -103,12 +103,13 @@ if (isset($_GET['controller']))
 		
 		default:
 		
-			include('public/page/accueil.php');
+				include('private/Controller/DefaultController.php');
 			
 			break;
 		}	
 }
 else
 {
-	include('public/page/accueil.php');
+
+	include('private/Controller/DefaultController.php');
 }

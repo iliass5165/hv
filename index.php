@@ -28,7 +28,7 @@
 		        
 	       	  <ul id="dropdown1" class="dropdown-content">
 				  <li><a href="index.php?page=actualite">Actualité</a></li>
-				  <li><a href="index.php?page=evenement">ÉEvénements</a></li>
+				  <li><a href="index.php?page=evenement">Événements</a></li>
 				  <li><a href="index.php?page=competition">Compétitions</a></li>
 			  </ul>
 		        <ul id="dropdown2" class="dropdown-content">
