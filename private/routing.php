@@ -1,5 +1,6 @@
 <?php 
 require('private/Pdo/MyPdo.php');
+require('private/Pdo/UtilisateurPdo.php');
 require('private/Class/Agenda.php');
 require('private/Class/Statut.php');
 require('private/Class/Contact.php');
@@ -110,7 +111,11 @@ if (isset($_GET['controller']))
 			include('public/page/materiel&technique.php');
 
 			break;
-		
+
+			case 'utilisateur';
+
+			include('private/Controller/UtilisateurController.php');
+			break;
 		default:
 		
 				include('private/Controller/DefaultController.php');

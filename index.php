@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -83,7 +84,9 @@
         <div class="col l3 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
-				<li>Titre</li>
+				<li>
+					<a href="index.php?controller=utilisateur&amp;action=signin" class="white-text">Administration</a>
+				</li>
 				<li>Tel</li>
 				<li>Email</li>
           </ul>

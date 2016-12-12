@@ -8,8 +8,14 @@ switch($action)
 	break;
 
 	case "getall":
-		
-		include("public/page/actualite/getall.php");
+		if(!isset($_SESSION['user']))
+		{
+			include("public/page/actualite/getall.php");
+		}
+		else
+		{
+			echo	'hello';
+		}
 	break;
 
 	case "create":
