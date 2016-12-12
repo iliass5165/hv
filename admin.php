@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -249,9 +249,7 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="admin.php?controller=utilisateur&amp;action=edit"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="index.php?controller=utilisateur&amp;action=logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -373,9 +371,9 @@
 
         <div id="page-wrapper">
             <div class="row">
-                <textarea  name="editor"></textarea>
                 <?php 
-                require("private/routing.php");?>
+                    require("private/routing.php");
+                ?>
             </div>
             <!-- /.row -->
         </div>

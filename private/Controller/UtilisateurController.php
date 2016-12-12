@@ -40,7 +40,12 @@ switch($action)
 
 	break;
 
+	case "edit":
+		include('public/page/utilisateur/edit.php');
+	break;
+
 	case "update":
+		echo $_POST['password'];
 	break;
 
 }
