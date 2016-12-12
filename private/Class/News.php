@@ -2,11 +2,11 @@
 
 class News
 {
-	private $id
-	private $titre
-	private $contenu
-	private $categorie
-	private $photo
+	private $id;
+	private $titre;
+	private $contenu;
+	private $categorie;
+	private $photo;
 
 
 //getter
@@ -36,6 +36,11 @@ public function getPhoto()
 }
 
 //setter 
+public function setId($id)
+{
+	$this->id = $id;
+}
+
 public function setTitre($titre)
 {
 	$this->titre = $titre;

@@ -7,32 +7,37 @@ class Album
 	private $description
 
 
-//getter
-public function getId()
-{
-	return $this->id;
-}
+	//getter
+	public function getId()
+	{
+		return $this->id;
+	}
 
-public function getTitre()
-{
-	return $this->titre;
-}
+	public function getTitre()
+	{
+		return $this->titre;
+	}
 
-public function getDescription()
-{
-	return $this->description;
-}
+	public function getDescription()
+	{
+		return $this->description;
+	}
 
-//setter
-public function setTitre($titre)
-{
-	return $this->titre = $titre;
-}
+	//setter
+	public function setId($id)
+	{
+		$this->id = $id;
+	}
 
-public function setDescription($description)
-{
-	return $this->description = $description;
-}
+	public function setTitre($titre)
+	{
+		$this->titre = $titre;
+	}
+
+	public function setDescription($description)
+	{
+		$this->description = $description;
+	}
 
 
 }

@@ -28,7 +28,7 @@
 		        
 	       	  <ul id="dropdown1" class="dropdown-content">
 				  <li><a href="index.php?page=actualite">Actualité</a></li>
-				  <li><a href="index.php?page=evenement">ÉEvénements</a></li>
+				  <li><a href="index.php?page=evenement">Événements</a></li>
 				  <li><a href="index.php?page=competition">Compétitions</a></li>
 			  </ul>
 		        <ul id="dropdown2" class="dropdown-content">
@@ -65,6 +65,14 @@
 		<div class="row">
 			<?php
 				require('private/Pdo/MyPdo.php');
+				require('private/Class/Agenda.php');
+				require('private/Class/Statut.php');
+				require('private/Class/Contact.php');
+				require('private/Class/Saison.php');
+				require('private/Class/Effectif.php');
+				require('private/Class/Utilisateur.php');
+				require('private/Class/Inscription.php');
+				require('private/Class/Association.php');
 				require("private/routing.php");
 				require("private/Class/Categorie.php");
 			?>
