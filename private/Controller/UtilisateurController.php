@@ -22,6 +22,7 @@ switch($action)
 		else
 		{
 			$_SESSION['message_error'] = "Login ou mot de passe incorrect";
+			header('location: index.php?controller=utilisateur&action=signin');
 		}
 	break;
 
