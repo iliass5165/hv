@@ -21,7 +21,7 @@ if (isset($_GET['controller']))
 
 			case 'competition':
 			
-				include('private/Controller/CompetitionController.php');
+				include('public/page/competition.php');
 
 			break;
 			case 'presentation':
@@ -100,6 +100,12 @@ if (isset($_GET['controller']))
 			include('public/page/materiel&technique.php');
 
 			break;
+
+			case 'login';
+
+			include('public/page/login.php');
+
+			break;
 		
 		default:
 		
@@ -112,4 +118,4 @@ else
 {
 
 	include('private/Controller/DefaultController.php');
-}
+}	

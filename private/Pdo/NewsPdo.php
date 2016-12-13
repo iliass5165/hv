@@ -21,7 +21,7 @@ Class NewsPdo extends MyPdo
 			$req = $this->connection->prepare('INSERT INTO news(titre, contenu, categorie_id, photo_id) VALUES(:titre, :contenu, :categorie, :photo)');
 			$req->bindValue(':titre',$actualite->getTitre(), PDO::PARAM_STR);
 			$req->bindValue(':contenu',$actualite->getContenu(), PDO::PARAM_STR);
-			$req->bindValue(':categorie',$actualite->getCategorie());
+			$req->bindValue(':categorie',$actualite->getCategorie(), PDO::PARAM_STR);
 			$req->bindValue(':photo',$actualite->getPhoto(), PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();
