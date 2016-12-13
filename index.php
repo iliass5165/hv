@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -64,17 +65,7 @@
 	<div class="container">
 		<div class="row">
 			<?php
-				require('private/Pdo/MyPdo.php');
-				require('private/Class/Agenda.php');
-				require('private/Class/Statut.php');
-				require('private/Class/Contact.php');
-				require('private/Class/Saison.php');
-				require('private/Class/Effectif.php');
-				require('private/Class/Utilisateur.php');
-				require('private/Class/Inscription.php');
-				require('private/Class/Association.php');
 				require("private/routing.php");
-				require("private/Class/Categorie.php");
 			?>
 			<!-- JS -->
 			<script src="public/js/materialize.js"></script>
@@ -93,7 +84,9 @@
         <div class="col l3 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
-				<li>Titre</li>
+				<li>
+					<a href="index.php?controller=utilisateur&amp;action=signin" class="white-text">Administration</a>
+				</li>
 				<li>Tel</li>
 				<li>Email</li>
           </ul>

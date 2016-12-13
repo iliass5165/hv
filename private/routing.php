@@ -1,4 +1,15 @@
 <?php 
+require('private/Pdo/MyPdo.php');
+require('private/Pdo/UtilisateurPdo.php');
+require('private/Class/Agenda.php');
+require('private/Class/Statut.php');
+require('private/Class/Contact.php');
+require('private/Class/Saison.php');
+require('private/Class/Effectif.php');
+require('private/Class/Utilisateur.php');
+require('private/Class/Inscription.php');
+require('private/Class/Association.php');
+require("private/Class/Categorie.php");
 if (isset($_GET['controller']))
 {
 	$controller= $_GET['controller'];
@@ -101,13 +112,14 @@ if (isset($_GET['controller']))
 
 			break;
 
-			case 'login';
 
-			include('public/page/login.php');
+			case 'utilisateur';
+
+				include('private/Controller/UtilisateurController.php');
 
 			break;
 		
-		default:
+			default:
 		
 				include('private/Controller/DefaultController.php');
 			

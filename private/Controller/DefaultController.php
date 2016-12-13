@@ -4,6 +4,15 @@ switch($action)
 {
 	
 	default:
-		include('public/page/accueil.php');
+
+			if(!isset($_SESSION['user']))
+			{
+				include('public/page/accueil.php');
+			}
+			else
+			{
+				echo "helko";
+			}
+
 	break;
 }

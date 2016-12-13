@@ -2,8 +2,8 @@
 
 class Categorie
 {
-	private $id
-	private $titre
+	private $id;
+	private $titre;
 
 
 	//getter

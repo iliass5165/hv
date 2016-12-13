@@ -13,19 +13,21 @@ Class UtilisateurPdo extends MyPdo
 			Echo "Erreur de la connexion avec la base de données ".$e->getMessage();
 		}
 	}
-		public function show($id)
+		public function show($user)
 	{
 		try
 		{
-			$req = $this->connection->prepare("SELECT * FROM utilisateur WHERE id = :id");
-			$req-> bindValue(':id', $id);
+			$req = $this->connection->prepare("SELECT * FROM utilisateur WHERE login = :login and motPasse = :mdp");
+			$req-> bindValue(':login', $user->getLogin());
+			$req-> bindValue(':mdp', $user->getMdp());
 			$req->execute();
-			$req->closeCursor();
-			
+
+			$rep = $req->fetch();
 			$utilisateur = new Utilisateur();
-			$utilisateur->setId($req['id']);
-			$utilisateur->setLogin($req['login']);
-			$utilisateur->setMdp($req['motpasse']);
+			$utilisateur->setId($rep['id']);
+			$utilisateur->setLogin($rep['login']);
+			$utilisateur->setMdp($rep['motPasse']);
+			$req->closeCursor();
 			return $utilisateur;
 		}
 		catch(Exception $e)
@@ -50,13 +52,12 @@ Class UtilisateurPdo extends MyPdo
 		}
 	}
 
-	public function edit($id,$utilisateur)
+	public function edit($utilisateur)
 	{
 		try
 		{
-			$req = $this->connection->prepare("UPDATE utilisateur SET login = :login, motpasse = :motpasse WHERE id = :id");
-			$req->bindValue(':id', $id);
-			$req->bindValue(':login', $utilisateur->getLogin(), PDO::PARAM_STR);
+			$req = $this->connection->prepare("UPDATE utilisateur SET  motpasse = :motpasse WHERE id = :id");
+			$req->bindValue(':id', $utilisateur->getId());
 			$req->bindValue('motpasse', $utilisateur->getMdp(), PDO::PARAM_STR);
 			$req->execute();
 			$req->closeCursor();
@@ -67,34 +68,4 @@ Class UtilisateurPdo extends MyPdo
 			"Erreur lors de l'execution de la requete de modification utilisateur". $e->getMessage();
 		}
 	}
-	public function delete($id)
-	{
-		try
-		{
-		$req = $this->connection->prepare('DELETE FROM utilisateur WHERE id = :id');
-		$req->bindValue(':id', $id);
-		$req->execute();
-		$req->closeCursor();
-		}
-		catch(Exception $e)
-		{
-			"Erreur lors de l'execution de la requete d'affichage utilisateur". $e->getMessage();
-		}
-		public function getall()
-		{
-			$req = $this->$connection->prepare('SELECT * FROM utilisateur');
-			$req->execute();
-			$afficher = [];
-			while ($data = $req->fetch())
-				{
-					$utilisateur = new Utilisateur();
-					$utilisateur->setId($data['id']);
-					$utilisateur->setLogin($data['login']);
-					$utilisateur->setMdp($data['motpasse']);
-					$afficher[] = $utilisateur;
-				}
-				return $afficher;
-				$req->closeCursor();
-
-		}
 }
