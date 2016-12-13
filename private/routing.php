@@ -118,7 +118,13 @@ if (isset($_GET['controller']))
 				include('private/Controller/UtilisateurController.php');
 
 			break;
-		
+			
+			case 'statut';
+
+				include('private/Controller/StatutController.php');
+
+			break;
+
 			default:
 		
 				include('private/Controller/DefaultController.php');
