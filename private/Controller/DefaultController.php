@@ -11,7 +11,7 @@ switch($action)
 			}
 			else
 			{
-				echo "helko";
+				return 1;
 			}
 
 	break;

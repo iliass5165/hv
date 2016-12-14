@@ -371,7 +371,7 @@
 
         <div id="page-wrapper">
             <div class="row">
-                <?php require("private/routing.php"); ?>
+<?php include("private/routing.php");?>
             </div>
             <!-- /.row -->
         </div>

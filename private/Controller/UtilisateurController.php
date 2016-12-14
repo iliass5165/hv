@@ -83,7 +83,17 @@ switch($action)
 		}
 	break;
 
-
+	default: 
+		if(isset($_SESSION['user']))
+		{
+			header('location: admin.php'); 
+		}
+			
+		else
+		{
+			header('location: index.php');
+		}
+	break;
 }
 
 
