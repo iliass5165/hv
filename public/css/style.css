@@ -10,13 +10,11 @@ body{
     flex-direction: column;
 }
 
-.brand-logo
-{
-	height: 70px;
-}
+
 
   main {
     flex: 1 0 auto;
   }
 
-   .brand-logo { font-size: 1.6rem; height: 60px; margin-top: -3px;} 
+   .brand-logo { font-size: 1.6rem; height: 65px;} 
+   .brand-logo1 { font-size: 1.6rem; height: 60px; margin-top: -3px; float: right;}

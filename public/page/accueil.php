@@ -8,7 +8,7 @@
 
 <div class="col s12 m12">
   <div class="card blue-grey darken-1">
-    <div class="card-content white-text">
+    <div class="card-content white-text hoverable">
       <span class="card-title">Bienvenue</span>
       <p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium illo praesentium blanditiis iure perspiciatis corporis nisi. Voluptates nesciunt doloribus ea, reiciendis commodi nemo quo ratione repudiandae, architecto soluta. Consectetur, quia.

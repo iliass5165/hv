@@ -45,7 +45,7 @@
    
 	
 		      </ul>
-
+			 <img src="public/images/logo.png" alt="" class="brand-logo1 hide-on-large-only">
 		      <ul id="nav-mobile" class="side-nav">
 				<li><a href="index.php">Accueil</a></li>
 				<li><a href="index.php?page=actualite">Actualités</a></li>
@@ -56,7 +56,7 @@
 				<li><a href="index.php?page=horaire">Horaires</a></li>
 				<li><a href="index.php?page=clendrier">Calendrier</a></li>
 				<li><a href="index.php?page=reglement">Réglement Intérieur</a></li>
-				<li><a href="index.php?page=materiel">Matériel & Technique</a></li>
+				<li><a href="index.php?page=materiel">Matériel et Technique</a></li>
 		      </ul>
 		     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 		    </div>
