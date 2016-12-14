@@ -19,4 +19,4 @@ body{
     flex: 1 0 auto;
   }
 
-   .brand-logo { font-size: 1.6rem; height: 65px;} 
+   .brand-logo { font-size: 1.6rem; height: 60px; margin-top: -3px;} 

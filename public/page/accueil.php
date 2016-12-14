@@ -1,9 +1,8 @@
 <br>
 <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/600/300/food/1"></a>
-    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/600/300/food/2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/600/300/food/3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/600/300/food/4"></a>
+    <img class="carousel-item"  src="public/images/climb.jpg" />
+    <img class="carousel-item"  src="public/images/escalade.jpg" />
+    <img class="carousel-item"  src="public/images/bg.jpg" />
 </div>
         
 

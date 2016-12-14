@@ -14,8 +14,8 @@
 <body>
 	
 	<header>
-		 <nav class=" green accent-3" role="navigation">
-			  <img src="public/images/logo.png" alt="" class="brand-logo">
+		 <nav class="teal" role="navigation">
+			  <img src="public/images/logo.png" alt="" class="brand-logo  hide-on-med-and-down">
 		      <ul class="right hide-on-med-and-down">
 		        <li><a href="index.php">Accueil</a></li>
 		        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">News<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -29,8 +29,8 @@
 		        
 	       	  <ul id="dropdown1" class="dropdown-content">
 				  <li><a href="index.php?page=actualite">Actualité</a></li>
-				  <li><a href="index.php?page=evenement">Événements</a></li>
-				  <li><a href="index.php?page=competition">Compétitions</a></li>
+				  <li><a href="index.php?page=evenement">Événement</a></li>
+				  <li><a href="index.php?page=competition">Compétition</a></li>
 			  </ul>
 		        <ul id="dropdown2" class="dropdown-content">
 				  <li><a href="index.php?page=presentation">Présentation</a></li>
@@ -38,7 +38,7 @@
 				  <li><a href="index.php?page=horaire">Horaires</a></li>
 				  <li><a href="index.php?page=clendrier">Calendrier</a></li>
 				  <li><a href="index.php?page=reglement">Réglement Intérieur</a></li>
-				  <li><a href="index.php?page=materiel">Matériel & Technique</a></li>
+				  <li><a href="index.php?page=materiel">Matériel et Technique</a></li>
 
 				</ul>
 
@@ -75,21 +75,18 @@
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">A propos</h5>
-          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quibusdam, alias deserunt possimus saepe mollitia aut veritatis delectus sapiente necessitatibus itaque magni? Dolores nobis alias nihil explicabo deserunt quaerat! Inventore!</p>
-
-
-        </div>
-        <div class="col l3 s12">
+        <div class="col l12 s12">
           <h5 class="white-text">Contact</h5>
-          <ul>
-				<li>
-					<a href="index.php?controller=utilisateur&amp;action=signin" class="white-text">Administration</a>
-				</li>
-				<li>Tel</li>
-				<li>Email</li>
-          </ul>
+          <p class="grey-text text-lighten-4">
+			 4 bis chemin des écoles <br>
+	   		 39120 LE DESCHAUX <br>
+    		  cirylbernard@yahoo.fr <br>
+    		   06 64 99 92 32 <br>
+          </p>
+          <p  class="white-text right-align">
+          	<a class="white-text" href="index.php?controller=utilisateur&amp;action=signin">Connexion</a>	 
+          </p>
+        </div>
         </div>
       </div>
     </div>
