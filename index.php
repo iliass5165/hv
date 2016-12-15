@@ -1,4 +1,5 @@
-<?php session_start();?>
+<?php session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -112,5 +113,4 @@
 	</script>
 </body>
 </html>
-
-
+<?php ob_end_flush(); ?>
