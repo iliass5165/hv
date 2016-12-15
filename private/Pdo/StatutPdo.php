@@ -78,9 +78,13 @@ Class StatutPdo extends MyPdo
 		{
 			"Erreur lors de l'execution de la requete d'affichage d'statut". $e->getMessage();
 		}
-		public function getall()
+	}
+
+	public function getall()
+	{
+		try
 		{
-			$req = $this->$connection->prepare('SELECT * FROM statut');
+			$req = $this->connection->prepare('SELECT * FROM statut');
 			$req->execute();
 			$afficher = [];
 			while ($data = $req->fetch())
@@ -94,4 +98,9 @@ Class StatutPdo extends MyPdo
 				$req->closeCursor();
 
 		}
+		catch(Exception $e)
+		{
+			"Erreur lors de l'execution de la requete d'affichage d'statut". $e->getMessage();
+		}
+	}
 }
