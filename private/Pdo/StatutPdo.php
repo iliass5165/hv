@@ -19,13 +19,14 @@ Class StatutPdo extends MyPdo
 		try
 		{
 			$req = $this->connection->prepare("SELECT * FROM statut WHERE id = :id");
-			$req-> bindValue(':id', $id);
+			$req->bindValue(':id', $id);
 			$req->execute();
-			$req->closeCursor();
 			
 			$statut = new Statut();
-			$statut->setId($req['id']);
-			$statut->setIntitule($req['intitulestatut']);
+			$rep = $req->fetch();
+			$statut->setId($rep['id']);
+			$statut->setIntitule($rep['intitulestatut']);
+			$req->closeCursor();
 			return $statut;
 		}
 		catch(Exception $e)
@@ -38,10 +39,11 @@ Class StatutPdo extends MyPdo
 	{
 		try
 		{
-		$req = $this->connection->prepare('INSERT INTO statut(intitulestatut) VALUES(:intitulestatut');
-		$req->bindValue(':intitulestatut',$statut->getIntitule(), PDO::PARAM_STR);
-		$req->execute();
-		$req->closeCursor();
+			$req = $this->connection->prepare('INSERT INTO statut(intitulestatut) VALUES(:intitulestatut)');
+			$req->bindValue(':intitulestatut',$statut->getIntitule(), PDO::PARAM_STR);
+			$req->execute();
+			$req->closeCursor();
+			return 1;
 		}
 		catch(Exception $e)
 		{
@@ -49,16 +51,16 @@ Class StatutPdo extends MyPdo
 		}
 	}
 
-	public function edit($id,$statut)
+	public function update($statut)
 	{
 		try
 		{
 			$req = $this->connection->prepare("UPDATE statut SET intitulestatut = :intitulestatut WHERE id = :id");
 			$req->bindValue(':intitulestatut', $statut->getIntitule(), PDO::PARAM_STR);
-			$req->bindValue(':id', $id);
+			$req->bindValue(':id', $statut->getId());
 			$req->execute();
 			$req->closeCursor();
-
+			return 1;
 		}
 		catch(Exception $e)
 		{
@@ -73,6 +75,7 @@ Class StatutPdo extends MyPdo
 		$req->bindValue(':id', $id);
 		$req->execute();
 		$req->closeCursor();
+		return 1;
 		}
 		catch(Exception $e)
 		{
