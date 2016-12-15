@@ -6,23 +6,37 @@ switch($action)
 {
 
 	case 'signin':
-		include('public/page/utilisateur/login.html');
-	break;
-	
-	case "login":
-		$user->setLogin($_POST['login']);
-		$user->setMdp(sha1($_POST['password']));
-
-		$utilisateur = $connectUser->show($user);
-		if(!is_null($utilisateur->getId()))
+		if(!isset($_SESSION['user']))
 		{
-			$_SESSION['user'] = $utilisateur;
-			header('location: admin.php');
+			include('public/page/utilisateur/login.html');
 		}
 		else
 		{
-			$_SESSION['message_error'] = "Login ou mot de passe incorrect";
-			header('location: index.php?controller=utilisateur&action=signin');
+			header('location: admin.php');
+		}
+	break;
+	
+	case "login":
+		if(!isset($_SESSION['user']))
+		{
+			$user->setLogin($_POST['login']);
+			$user->setMdp(sha1($_POST['password']));
+
+			$utilisateur = $connectUser->show($user);
+			if(!is_null($utilisateur->getId()))
+			{
+				$_SESSION['user'] = $utilisateur;
+				header('location: admin.php');
+			}
+			else
+			{
+				$_SESSION['message_error'] = "Login ou mot de passe incorrect";
+				header('location: index.php?controller=utilisateur&action=signin');
+			}
+		}
+		else
+		{
+			header('location: admin.php');
 		}
 	break;
 
