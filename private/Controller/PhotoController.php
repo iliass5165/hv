@@ -16,8 +16,9 @@ switch($action)
 
 	case "delete":
 	break;
+
 	case "getall":
-		return 1;
+		include('public/page/photo/getall.php');
 	break;
 
 }

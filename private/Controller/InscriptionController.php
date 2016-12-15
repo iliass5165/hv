@@ -6,6 +6,7 @@ switch($action)
 	break;
 
 	case "show":
+		include("public/page/inscription/show.php");
 	break;
 
 	case "store":
@@ -15,9 +16,6 @@ switch($action)
 	break;
 
 	case "delete":
-	break;
-	case "getall":
-		return 1;
 	break;
 
 }

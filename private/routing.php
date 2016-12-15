@@ -26,13 +26,14 @@ if (isset($_GET['controller']))
 
 			case 'evenement':
 			
-				include('public/page/evenement.php');
+				include('private/Controller/EvenementController.php');
+
 
 			break;
 
 			case 'competition':
 			
-				include('public/page/competition.php');
+				include('private/Controller/CompetitionController.php');
 
 			break;
 			case 'presentation':
@@ -70,21 +71,21 @@ if (isset($_GET['controller']))
 
 			break;
 
-			case 'tarifInscription':
+			case 'inscription':
 		
-			include('public/page/tarifInscription.php');
+			include('private/Controller/InscriptionController.php');
 
 			break;
 
 			case 'contact':
 		
-			include('public/page/contact.php');
+			include('private/Controller/ContactController.php');
 
 			break;
 
 			case 'photo':
 		
-			include('public/page/photo.php');
+			include('private/Controller/PhotoController.php');
 
 			break;
 			

@@ -26,17 +26,17 @@ if(isset($_SESSION['user']))
 		        <li><a href="index.php">Accueil</a></li>
 		        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">News<i class="material-icons right">arrow_drop_down</i></a></li>
 		 		<li><a class="dropdown-button" href="#!" data-activates="dropdown2">A Propos<i class="material-icons right">arrow_drop_down</i></a></li>
-		 		<li ><a href="index.php?page=tarifInscription">Inscription</a></li>
-		 		<li ><a href="index.php?page=contact">Contact</a></li>
-		 		<li ><a href="index.php?page=photo">Photo</a></li>
+		 		<li ><a href="index.php?controller=inscription&amp;action=show">Inscription</a></li>
+		 		<li ><a href="index.php?controller=contact&amp;action=show">Contact</a></li>
+		 		<li ><a href="index.php?controller=photo&amp;action=getall">Photo</a></li>
 			  </ul>
 			
 
 		        
 	       	  <ul id="dropdown1" class="dropdown-content">
-				  <li><a href="index.php?page=actualite">Actualité</a></li>
-				  <li><a href="index.php?page=evenement">Événement</a></li>
-				  <li><a href="index.php?page=competition">Compétition</a></li>
+				  <li><a href="index.php?controller=actualite&amp;action=getall">Actualité</a></li>
+				  <li><a href="index.php?controller=evenement&amp;action=getall">Événement</a></li>
+				  <li><a href="index.php?controller=competition&amp;action=getall">Compétition</a></li>
 			  </ul>
 		        <ul id="dropdown2" class="dropdown-content">
 				  <li><a href="index.php?page=presentation">Présentation</a></li>
@@ -54,7 +54,7 @@ if(isset($_SESSION['user']))
 			 <img src="public/images/logo.png" alt="" class="brand-logo1 hide-on-large-only">
 		      <ul id="nav-mobile" class="side-nav">
 				<li><a href="index.php">Accueil</a></li>
-				<li><a href="index.php?page=actualite">Actualités</a></li>
+  			    <li><a href="index.php?controller=actualite&amp;action=getall">Actualité</a></li>
 				<li><a href="index.php?page=evenement">Événements</a></li>
 				<li><a href="index.php?page=competition">Compétitions</a></li>
 				<li><a href="index.php?page=presentation">Présentation</a></li>
@@ -63,6 +63,9 @@ if(isset($_SESSION['user']))
 				<li><a href="index.php?page=clendrier">Calendrier</a></li>
 				<li><a href="index.php?page=reglement">Réglement Intérieur</a></li>
 				<li><a href="index.php?page=materiel">Matériel et Technique</a></li>
+				<li ><a href="index.php?controller=inscription&amp;action=show">Inscription</a></li>
+		 		<li ><a href="index.php?controller=contact&amp;action=show">Contact</a></li>
+		 		<li ><a href="index.php?controller=photo&amp;action=getall">Photo</a></li>
 		      </ul>
 		     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 		    </div>
@@ -111,6 +114,7 @@ if(isset($_SESSION['user']))
 		$( document ).ready(function() {
 		    $('.carousel.carousel-slider').carousel({full_width: true});
 			$('.button-collapse').sideNav();
+			 $('.collapsible').collapsible();
 			$(".dropdown-button").dropdown();
     		$('select').material_select();
     		$('.datepicker').pickadate({selectMonths: true, selectYears: true, selectYears: 100});
