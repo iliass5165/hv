@@ -1,5 +1,10 @@
 <?php session_start();
-ob_start();?>
+ob_start();
+if(!isset($_SESSION['user']))
+{
+    header('location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -38,7 +43,6 @@ ob_start();?>
 </head>
 
 <body>
-
     <div id="wrapper">
 
         <!-- Navigation -->
